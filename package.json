@@ -1,0 +1,28 @@
+{
+  "name": "apitest66",
+  "version": "1.0.0",
+  "description": "test Deploy REST  API",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pongsatronphongsri/APITEST66.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pongsatronphongsri/APITEST66/issues"
+  },
+  "homepage": "https://github.com/pongsatronphongsri/APITEST66#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

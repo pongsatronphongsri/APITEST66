@@ -1,0 +1,22 @@
+GET http://localhost:3000/subscribers
+
+###
+GET http://localhost:3000/subscribers/623ad0dedcb707b75a620399
+
+###
+
+POST http://localhost:3000/subscribers
+Content-Type:application/json
+
+{"name": "nanawa",
+  "subscribedToChannel":"dodmod"
+}
+###
+DELETE  http://localhost:3000/subscribers/623ad0dedcb707b75a620399
+###
+PATCH  http://localhost:3000/subscribers/623ad377dcb707b75a6203a0
+Content-Type:application/json
+
+{
+  "subscribedToChannel":"running"
+}
