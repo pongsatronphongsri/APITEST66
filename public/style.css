@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-clor:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --rgbred:rgba(231,76,.60);
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+
+}
+
+html{
+    font-size: 63%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.3rem;
+    scroll-behavior: smooth;
+    background: rgba(255,205,130);
+    
+}
+
+section{
+    padding: 8rem 9%;
+
+}
+section:nth-child(even){
+    background: #eee;
+}
+
+.sub-headter{
+    text-align: center;
+    color: var(--rgbred);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+.headter{
+    text-align: center;
+    color: black;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: black;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+.btn:hover{
+    background: var(--rgbred);
+    letter-spacing: .1rem;
+}
+
+.namelogin{
+    color: black;
+    font-size: 1.5rem;
+
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .Logo{
+    color: var(--rgbred);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 2.5rem;
+    color: black;
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color: #fff;
+    background: var(--rgbred);
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: 3rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: black;
+    border-radius: 50%;
+    background: #eee;
+
+
+}
+header .icons i:hover,
+header .icons a:hover{
+    color: #fff;
+    background: var(--rgbred);
+    transform: rotate(360deg);
+}
+
+#search-form{
+    position: fixed;
+    top: -110%; left: 0;
+    height: 100%; width: 100%;
+    z-index: 1004;
+    background:rgba(0,0,0,.8) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+#search-form.active{
+    top:0;
+}
+
+
+
+#search-form #search-box{
+    width: 50rem;
+    border-bottom: .1rem solid #fff;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 3rem;
+    text-transform: none;
+    background:none ;
+}
+#search-form #search-box::placeholder{
+    color: #eee;
+    }
+
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
+#search-form label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+}
+#search-form label:hover{
+    color: var(--rgbred);
+}
+#search-form #close{
+   position: absolute;
+   color: #fff;
+   cursor: pointer;
+   top: 2rem; right:3rem ; 
+   font-size: 5rem;
+}
+.home .home-slider .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10rem;
+    padding-top: 4rem;
+}
+.home .home-slider .slide .content{
+    flex: 1 1 45rem;
+    
+}
+.home .home-slider .slide .image{
+    flex: 1 1 45rem;
+
+}
+.home .home-slider .slide .image img{
+    width: 100%;
+}
+.home .home-slider .slide .content span{
+    color: var(--rgbred);
+    font-size: 2.5rem;
+}
+.home .home-slider .slide .content h3{
+    color: black;
+    font-size: 4rem;
+}
+.home .home-slider .slide .content p{
+    color:var(--light-clor);
+    font-size: 2.2rem;
+    padding:.5rem 0 ;
+    line-height: 1.5;
+
+}
+.swiper-pagination-bullet-active{
+    background: var(--rgbred);
+
+}
+
+.dishes .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(29rem,1fr));
+    gap: 1.5rem;
+    
+}
+
+.dishes .box-container .box{
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.dishes .box-container .box .fa-heart,
+.dishes .box-container .box .fa-eye{
+    position: absolute;
+    top: 1.5rem;
+    background: #eee;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:black;
+}
+.dishes .box-container .box .fa-heart:hover,
+.dishes .box-container .box .fa-eye:hover{
+    background:var(--rgbred) ;
+    color: #fff;
+
+}
+.dishes .box-container .box .fa-heart{
+    right: -15rem;
+}
+.dishes .box-container .box .fa-eye{
+    left: -15rem;
+}
+.dishes .box-container .box:hover .fa-heart{
+    right: 1.5rem;
+}
+.dishes .box-container .box:hover .fa-eye{
+    left: 1.5rem;
+}
+.dishes .box-container .box img{
+    height: 17rem;
+    margin: 1rem 0;
+}
+.dishes .box-container .box h3{
+    counter-reset:var(--black) ;
+    font-size: 2.5rem;
+}
+.dishes .box-container .box .star{
+    padding: 1rem 0;
+}
+.dishes .box-container .box .star i{
+    font-size: 1.7rem;
+    color: var(--rgbred);
+}
+
+.dishes .box-container .box span{
+    color: var(--rgbred);
+    font-weight: bolder;
+    margin-right: 1rem;
+    font: 2.5rem;
+}
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+.menu .box-container .box{
+    background: #fff;
+    border: .1rem solid back;
+    border-radius: .5rem;
+    box-shadow:var(--box-shadow) ;
+}
+.menu .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+
+}
+.menu .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+.menu .box-container .box .image .fa-heart{
+    position: absolute;
+    top: 2.5rem; right: 2.5rem;
+    height: 5rem; width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    background: #fff;
+    border-radius: 50%;
+    color: black;
+
+}
+.menu .box-container .box .image  .fa-heart:hover{
+    background-color: var(--rgbred);
+    color: #fff;
+}
+.menu .box-container .box .content{
+    padding: 2rem;
+    padding-top: 0;
+}
+.menu .box-container .box .content .stars{
+    padding-bottom: 1rem;
+    
+}
+.menu .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--rgbred);
+    
+}
+.menu .box-container .box .content h3{
+    color: black;
+    font-size: 2.5rem;
+    
+}
+.menu .box-container .box .content p{
+    color: var(--light-clor);
+    font-size: 1.7rem;
+    padding: 5rem 0;
+    line-height: 1.5;
+
+}
+.menu .box-container .box .content .pice{
+    color: var(--rgbred);
+    font-size: 1.5rem;
+    margin-left: 2.5rem;
+}
+
+test{
+
+}
+
+:root{
+    --Inter: 'Inter', sans-serif;
+    --Kaushan: 'Kaushan Script', cursive;
+    --Mont: 'Montserrat', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5;
+    font-family: var(--Mont);
+    background-color:rgba(255,205,130) ;
+    color: #fff;
+}
+.menu{
+    margin: 2rem 0;
+}
+.menu-container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.menu-head{
+    text-align: center;
+}
+.menu-head h2{
+    font-family: var(--Kaushan);
+    font-size: 2.6rem;
+}
+.menu-head p{
+    font-weight: 300;
+    padding: 1.8rem 0;
+}
+.menu-btns{
+    padding: 0.6rem 0;
+    display: flex;
+    justify-content: center;
+}
+.menu-btn{
+    font-family: var(--Inter);
+    text-transform: uppercase;
+    font-size: 2.0rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: black;
+    display: block;
+    margin: 0 1rem;
+    cursor: pointer;
+    outline: 0;
+    transition: opacity 0.4s ease-out;
+}
+.menu-btn::after{
+    content: "";
+    display: block;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ff9505;
+    margin-top: 0.5rem;
+    width: 0;
+    transition: width 0.4s ease-out;
+}
+.menu-btn:hover::after{
+    width: 100%;
+}
+.menu-btn:hover{
+    opacity: 0.8;
+}
+.menu .menu-container .menu-head h2{
+    color: var(--rgbred);
+    font-size: 2.5rem;
+}
+.menu .menu-container .menu-head p{
+    color: black;
+    font-size: 1.7rem;
+    
+}
+.active-btn{
+    color: var(--rgbred);
+}
+.food-items{
+    margin: 2rem 0;
+}
+.food-item{
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    color: #000;
+    margin: 0.6rem 0;
+    box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.75);
+    display: flex;
+    animation: fadeIn 2s;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.food-img img{
+    border-radius: 4px;
+}
+.food-content{
+    padding: 1rem;
+}
+.food-name{
+    font-family: var(--Inter);
+    color: #ff9505;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.line{
+    width: 100px;
+    height: 3px;
+    background: #ff9505;
+}
+.food-price{
+    padding: 0.4rem 0;
+    font-weight: 600;
+    font-size: 1.4rem;
+    opacity: 0.8;
+}
+.rating{
+    display: flex;
+    list-style: none;
+}
+.rating .fa-star{
+    margin-right: 0.4rem;
+    color: var(--rgbred);
+}
+.category{
+    padding-top: 0.2rem;
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: var(--Inter);
+}
+.category span{
+    font-weight: 500;
+}
+@media screen and (min-width: 600px){
+    .food-item{
+        display: grid;
+        grid-template-columns: 25% auto;
+        align-items: center;
+        padding: 1rem;
+        column-gap: 1rem;
+    }
+    .food-content{
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .menu-head p{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .menu-head p{
+        width: 50%;
+    }
+    .food-items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+    html{
+        font-size: 25%;
+       
+    }
+
+    header{
+        padding: 1rem 2rem;
+    }
+
+}
