@@ -1,5 +1,5 @@
 require('dotenv').config()
-
+const expressLayouts = require('express-ejs-layouts')
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
@@ -9,13 +9,18 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open',() => console.log('Connected to Database'))
 
-app.use(express.json())
 
-const subscribersRouter = require('./routes/subscribers')
-app.use('/subscribers', subscribersRouter)
+app.set("view engine" ,"ejs");
+app.use(express.urlencoded({extended:true}));
+app.get("/",(req,res)=>{
+    res.render("index");
+});
+
+
+
 
 app.get("/", (req, res) => {
-    res.send("Hello Node.js REST Server");
-    });
+    res.render("index");
+   });
 
 app.listen(3000, () => console.log('Server Started'))
