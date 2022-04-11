@@ -23,7 +23,10 @@
         <a href="#menu">MENU</a>
         <a href="#account">ACCOUNT</a>
         <a href="#adress">ADRESS</a>
-        <a href="/logout" >Logout</a>
+        
+      
+        
+        
         
     </nav>
 
@@ -33,6 +36,14 @@
         
 
     </div>
+
+    
+      
+    <form action="/logout?_method=DELETE" method="POST">
+      <button class="btn" type="submit">LOGOUT</button>
+    </form>
+    <h1>User: <%= name%></h1>
+    
     
 
 </header>
