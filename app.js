@@ -1,10 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const fs = require("fs");
 const multer = require("multer");
 const app = express();
-require("dotenv").config();
 const seed = require("./seed");
 const prodRoutes = require("./routes/product");
 const authRoutes = require("./routes/auth");
