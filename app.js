@@ -21,9 +21,10 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 mongoose
   .connect(process.env.MDB_CONNECT, {
    // useNewUrlParser: true,
-    useUnifiedTopology: true,
+    //useUnifiedTopology: true,
     //useFindAndModify: false,
     //useCreateIndex: true,
+    
   })
   .then(() => {
     console.log("Database is connected");
