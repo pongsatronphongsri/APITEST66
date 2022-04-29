@@ -40,27 +40,6 @@ app.use(passport.session());
 // passport.use(new LocalStrategy(User.authenticate()));
 passport.use(new LocalStrategy(User.authenticate())); // for login logout session
 
-//Configuring Google Strategy
-passport.use(
-  new GoogleStrategy(
-    {
-      clientID: process.env.GA_clientID,
-      clientSecret: process.env.GA_clientSecret,
-      callbackURL: process.env.GA_callbackURL,
-    },
-    async function (accessToken, refreshToken, profile, done) {
-      const profileDetails = {
-        username: profile.displayName,
-        googleid: profile.id,
-        email: profile.emails[0].value,
-        photo: profile.photos[0].value,
-      };
-      await User.findOrCreate(profileDetails, function (err, user) {
-        return done(err, user);
-      });
-    }
-  )
-);
 
 //SERIALIZE AND DESERIALIZING
 passport.serializeUser(User.serializeUser());
