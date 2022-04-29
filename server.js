@@ -111,15 +111,15 @@ app.delete("/logout", (req, res) => {
   });
 
 
-  app.post("/addProduct",async (req, res) => {
+  app.post("/addcart",async (req, res) => {
     const PD = new productModel({
       nameProduct: req.body.nameProduct,
       price: req.body.price,
-      details: req.body.details,
+      
     });
   
     await PD.save();
-    res.redirect("/addProduct");
+    res.redirect("/addcart");
   });  
 
 
