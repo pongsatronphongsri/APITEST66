@@ -18,21 +18,12 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const User = require("./models/user");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
-mongoose
-  .connect(process.env.MDB_CONNECT, {
-   // useNewUrlParser: true,
-    //useUnifiedTopology: true,
-    //useFindAndModify: false,
-    //useCreateIndex: true,
-    
-  })
-  .then(() => {
-    console.log("Database is connected");
-  })
-  .catch((err) => {
-    console.log("Data Base Error...");
-    console.log(err);
-  });
+
+ mongoose.connect(process.env.DATABASE_URL)
+const db = mongoose.connection
+db.on('error', (error) => console.error(error))
+db.once('open',() => console.log('Connected to Database'))
+  
 app.use(
   session({
     name: "ecomv1_id",
